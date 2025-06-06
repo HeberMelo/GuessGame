@@ -1,2 +1,7 @@
-# GuessGame
-simple number guessing game where the computer randomly selects a number and the user has to guess it.
+# Number Guessing Game
+
+A CLI game where the user must guess a number between 1 and 100 within limited chances.
+
+## Project URL
+
+https://github.com/HeberMelo/GuessGame
