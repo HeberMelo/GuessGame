@@ -1,7 +1,7 @@
 # Number Guessing Game
 
-A CLI game where the user must guess a number between 1 and 100 within limited chances.
+This project was provided by Roadmap.sh, at this link: https://roadmap.sh/projects/number-guessing-game
 
 
-https://github.com/HeberMelo/GuessGame
+
 
