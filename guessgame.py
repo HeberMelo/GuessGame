@@ -1,55 +1,35 @@
-import random 
+import customtkinter as ctk 
 import random
 
-def get_difficulty():
-    print("\nPlease select the difficulty level:")
-    print("1. Easy (10 chances)")
-    print("2. Medium (5 chances)")
-    print("3. Hard (3 chances)")
 
-    while True:
-        choice = input("Enter your choice (1-3): ")
-        if choice == "1":
-            return 10, "Easy"
-        elif choice == "2":
-            return 5, "Medium"
-        elif choice == "3":
-            return 3, "Hard"
-        else:
-            print("Invalid input. Please enter 1, 2, or 3.")
+ctk.set_appearance_mode("dark")
+ctk.set_appearance_mode("blue")
 
-def play_game():
-    print("Welcome to the Number Guessing Game!")
-    print("I'm thinking of a number between 1 and 100.")
+numero_secreto = None
+intentos_restantes = 0
+intenos_realizados = 0
 
-    number_to_guess = random.randint(1, 100)
-    chances, difficulty = get_difficulty()
+#Funciones del juego
 
-    print(f"\nGreat! You have selected the {difficulty} difficulty level.")
-    print("Let's start the game!")
+def iniciar_juego(dificultad):
+    global numero_secreto, intentos_restantes , intenos_realizados
 
-    attempts = 0
-    while chances > 0:
-        try:
-            guess = int(input("\nEnter your guess: "))
-            attempts += 1
-            chances -= 1
+    intentos_realizados = 0
+    numero_secreto = random.randint(1, 100)
 
-            if guess == number_to_guess:
-                print(f" Congratulations! You guessed the correct number in {attempts} attempts.")
-                break
-            elif guess < number_to_guess:
-                print("Incorrect! The number is greater than your guess.")
-            else:
-                print("Incorrect! The number is less than your guess.")
+    if dificultad == "Fácil":
+        intentos_restantes = 10
+    elif dificultad == "Media":
+        intentos_restantes = 5
+    else:
+        intentos_restantes = 3   
 
-            if chances > 0:
-                print(f"You have {chances} chances left.")
-            else:
-                print(f"\n Game Over! You've used all your chances. The correct number was {number_to_guess}.")
 
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-
-if __name__ == "__main__":
-    play_game()
+        etiqueta_estado.configure(
+        text=f"Dificultad: {dificultad}\nIntentos restantes: {intentos_restantes}"
+    )
+    etiqueta_mensaje.configure(
+        text="Adivina un número entre 1 y 100"
+    )
+    entrada_numero.delete(0, "end")
+    boton_adivinar.configure(state="normal")
