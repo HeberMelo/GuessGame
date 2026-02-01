@@ -31,7 +31,7 @@ Cuenta con un selector de dificultad.
 A continuación se muestra el proceso de instalación
 
 # Clonar el repositorio
-git clone https://github.com/tu-usuario/GuessGame.git
+git clone https://github.com/HeberMelo/GuessGame.git
 
 # Acceder a la carpeta del proyecto
 cd GuessGame
