@@ -27,8 +27,20 @@ Cuenta con un selector de dificultad.
 # Vista previa de la app
 <img width="514" height="642" alt="Captura de pantalla 2026-01-31 183618" src="https://github.com/user-attachments/assets/ba4874ba-ec14-4131-9eb6-783965652ff3" />
 
->[IMPORTANT]
->A continuación se muestra el proceso de instalación 
+>[!IMPORTANT]
+A continuación se muestra el proceso de instalación
+
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/GuessGame.git
+
+# Acceder a la carpeta del proyecto
+cd GuessGame
+
+# Instalar dependencias
+pip install customtkinter
+
+# Ejecutar la aplicación
+python juego_adivina_numero.py
 
  
 
